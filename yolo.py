@@ -208,6 +208,7 @@ class YOLO(object):
             draw = ImageDraw.Draw(image)
             # label_size = draw.textsize(label, font)
             _,_,label_size = draw.textbbox((0,0), text=label, font=font) # label_size = (width, height)
+            
             label = label.encode('utf-8')
             print(label, top, left, bottom, right)
             
