@@ -206,15 +206,9 @@ class YOLO(object):
 
             label = '{} {:.2f}'.format(predicted_class, score)
             draw = ImageDraw.Draw(image)
-<<<<<<< HEAD
-            # label_size = draw.textsize(label, font) # deprecated
-            _, _, width, height = draw.textbbox((0, 0), text=label, font=font)
-            label_size = (width, height)
-=======
             # label_size = draw.textsize(label, font)
             _,_,label_size = draw.textbbox((0,0), text=label, font=font) # label_size = (width, height)
             
->>>>>>> refs/remotes/origin/master
             label = label.encode('utf-8')
             print(label, top, left, bottom, right)
             
